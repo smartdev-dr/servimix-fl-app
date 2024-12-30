@@ -6,7 +6,7 @@ class SmallCardGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 240,
+      height: 450,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
@@ -51,6 +51,40 @@ class SmallCardGrid extends StatelessWidget {
                       'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
                   title: 'Pintura',
                   description: 'Pintamos tu espacio',
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 20),
+          SizedBox(
+            height: 170,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              children: const [
+                SmallImageCard(
+                  imageUrl:
+                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
+                  title: 'Jardinería',
+                  description: 'Mantenimiento de jardines',
+                ),
+                SmallImageCard(
+                  imageUrl:
+                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
+                  title: 'Carpintería',
+                  description: 'Trabajos en madera',
+                ),
+                SmallImageCard(
+                  imageUrl:
+                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
+                  title: 'Cerrajería',
+                  description: 'Servicios 24/7',
+                ),
+                SmallImageCard(
+                  imageUrl:
+                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
+                  title: 'Albañilería',
+                  description: 'Construcción y reformas',
                 ),
               ],
             ),

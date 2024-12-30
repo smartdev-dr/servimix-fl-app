@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-class CustomAppbarHome extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppbarHome({super.key});
+class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
+  final String title;
+  const CustomAppbar({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class CustomAppbarHome extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Center(
         child: Text(
-          'Servimix',
+          title,
           style: titleStyle,
         ),
       ),

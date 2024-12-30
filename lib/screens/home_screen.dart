@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'package:servi_mix/screens/screens.dart';
-
 import 'package:servi_mix/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -97,10 +95,18 @@ class HomeContentScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: CustomAppbarHome(),
+      appBar: CustomAppbar(
+        title: 'ServiMix',
+      ),
       drawer: SideMenu(),
-      body: Column(
-        children: [SwiperCard(), CustomIconButton(), SmallCardGrid()],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SwiperCard(),
+            CustomIconButton(),
+            SmallCardGrid(),
+          ],
+        ),
       ),
     );
   }
