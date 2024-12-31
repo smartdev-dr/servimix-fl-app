@@ -9,7 +9,7 @@ class CustomIconButton extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
           child: Text(
             'Categorías',
             style: TextStyle(
