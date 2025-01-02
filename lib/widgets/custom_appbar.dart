@@ -12,11 +12,10 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
         ?.copyWith(fontWeight: FontWeight.bold);
 
     return AppBar(
-      title: Center(
-        child: Text(
-          title,
-          style: titleStyle,
-        ),
+      centerTitle: true,
+      title: Text(
+        title,
+        style: titleStyle,
       ),
       actions: [
         IconButton(

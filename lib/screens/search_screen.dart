@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:servi_mix/widgets/custom_search_item.dart';
 import 'package:servi_mix/widgets/widgets.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -7,13 +8,14 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        appBar: CustomAppbar(title: 'Buscar'),
-        drawer: SideMenu(),
+    return Scaffold(
+        appBar: const CustomAppbar(title: 'Buscar'),
+        drawer: const SideMenu(),
         body: SingleChildScrollView(
             child: Column(
           children: [
-            CustomDropdowns(),
+            const CustomDropdowns(),
+            CustomSearchItem(),
           ],
         )));
   }

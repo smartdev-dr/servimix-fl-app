@@ -6,7 +6,7 @@ class CustomDropdowns extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.only(top: 1, left: 20, right: 20),
       child: const Row(
         children: [
           Expanded(
@@ -16,7 +16,7 @@ class CustomDropdowns extends StatelessWidget {
               items: ['Ciudad A', 'Ciudad B', 'Ciudad C'],
             ),
           ),
-          SizedBox(width: 10),
+          SizedBox(width: 8),
           Expanded(
             child: _CustomDropdown(
               icon: Icons.category,
