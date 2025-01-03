@@ -1,52 +1,45 @@
 import 'package:flutter/material.dart';
 
-class SmallCardGrid extends StatelessWidget {
-  const SmallCardGrid({super.key});
+class SearchImageSwiper extends StatelessWidget {
+  const SearchImageSwiper({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 450,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8.0),
-            child: Text(
-              'Mejores Calificados',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          const SizedBox(height: 10),
-          SizedBox(
-            height: 170,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.only(left: 20, right: 10),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        const SizedBox(height: 10),
+        Flexible(
+          child: Padding(
+            padding: const EdgeInsets.only(left: 20, right: 10),
+            child: GridView.count(
+              crossAxisCount: 2, // Número de columnas
+              crossAxisSpacing: 10, // Espacio horizontal entre tarjetas
+              mainAxisSpacing: 10, // Espacio vertical entre tarjetas
+              shrinkWrap: true, // Para ajustar el tamaño al contenido
+              physics:
+                  NeverScrollableScrollPhysics(), // Deshabilitamos el scroll
               children: const [
-                SmallImageCard(
+                CardSwiperSearch(
                   imageUrl:
                       'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
                   title: 'Plomería',
                   description: 'Servicios de plomería',
                 ),
-                SmallImageCard(
+                CardSwiperSearch(
                   imageUrl:
                       'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
                   title: 'Electricidad',
                   description: 'Instalaciones',
                 ),
-                SmallImageCard(
+                CardSwiperSearch(
                   imageUrl:
                       'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
                   title: 'Limpieza',
-                  description: 'limpieza profesional',
+                  description: 'Limpieza profesional',
                 ),
-                SmallImageCard(
+                CardSwiperSearch(
                   imageUrl:
                       'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
                   title: 'Pintura',
@@ -55,55 +48,18 @@ class SmallCardGrid extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 20),
-          SizedBox(
-            height: 170,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.only(
-                left: 20,
-                right: 10,
-              ),
-              children: const [
-                SmallImageCard(
-                  imageUrl:
-                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
-                  title: 'Jardinería',
-                  description: 'Mantenimiento de jardines',
-                ),
-                SmallImageCard(
-                  imageUrl:
-                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
-                  title: 'Carpintería',
-                  description: 'Trabajos en madera',
-                ),
-                SmallImageCard(
-                  imageUrl:
-                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
-                  title: 'Cerrajería',
-                  description: 'Servicios 24/7',
-                ),
-                SmallImageCard(
-                  imageUrl:
-                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
-                  title: 'Albañilería',
-                  description: 'Construcción y reformas',
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
 
-class SmallImageCard extends StatelessWidget {
+class CardSwiperSearch extends StatelessWidget {
   final String imageUrl;
   final String title;
   final String description;
 
-  const SmallImageCard({
+  const CardSwiperSearch({
     super.key,
     required this.imageUrl,
     required this.title,
@@ -126,7 +82,6 @@ class SmallImageCard extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-
             // Gradiente para que el texto se vea mejor
             Positioned.fill(
               child: Container(
@@ -142,7 +97,6 @@ class SmallImageCard extends StatelessWidget {
                 ),
               ),
             ),
-
             // Texto
             Positioned(
               bottom: 8,

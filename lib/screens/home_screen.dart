@@ -24,11 +24,7 @@ class HomeContentScreen extends StatelessWidget {
       drawer: SideMenu(),
       body: SingleChildScrollView(
         child: Column(
-          children: [
-            SwiperCard(),
-            CustomIconButton(),
-            SmallCardGrid(),
-          ],
+          children: [SwiperCard(), CustomIconButton(), SmallCardGrid()],
         ),
       ),
     );

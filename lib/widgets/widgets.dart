@@ -1,3 +1,5 @@
+export 'package:servi_mix/widgets/custom_search_item.dart';
+export 'package:servi_mix/widgets/card_swiper_search.dart';
 export 'package:servi_mix/widgets/custom_navigation_bar.dart';
 export 'package:servi_mix/widgets/custom_dropdowns.dart';
 export 'package:servi_mix/widgets/small_card.dart';

@@ -46,7 +46,7 @@ class _Slide extends StatelessWidget {
     );
 
     return Padding(
-      padding: const EdgeInsets.only(bottom: 25, top: 12),
+      padding: const EdgeInsets.only(right: 4, left: 4, bottom: 25, top: 12),
       child: DecoratedBox(
         decoration: decoration,
         child: ClipRRect(

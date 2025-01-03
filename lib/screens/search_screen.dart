@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:servi_mix/widgets/custom_search_item.dart';
+
 import 'package:servi_mix/widgets/widgets.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -16,6 +16,7 @@ class SearchScreen extends StatelessWidget {
           children: [
             const CustomDropdowns(),
             CustomSearchItem(),
+            const SearchImageSwiper(),
           ],
         )));
   }

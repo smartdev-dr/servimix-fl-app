@@ -32,28 +32,27 @@ class _CustomSearchItemState extends State<CustomSearchItem> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.5,
-      child: Padding(
-        padding: const EdgeInsets.only(left: 20, right: 20),
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 4,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          TextField(
+            controller: _searchController,
+            onChanged: (query) => _filterItems(query),
+            decoration: InputDecoration(
+              hintText: 'Buscar servicios',
+              prefixIcon: const Icon(Icons.search),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              contentPadding: const EdgeInsets.symmetric(vertical: 5),
             ),
-            TextField(
-              controller: _searchController,
-              onChanged: (query) => _filterItems(query),
-              decoration: InputDecoration(
-                  hintText: 'Buscar servicios',
-                  prefixIcon: const Icon(Icons.search),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  contentPadding: const EdgeInsets.symmetric(vertical: 5)),
-            ),
+          ),
+          if (_filteredItems.isNotEmpty)
             Expanded(
               child: ListView.builder(
+                shrinkWrap: true,
                 itemCount: _filteredItems.length,
                 itemBuilder: (context, index) {
                   return ListTile(
@@ -62,8 +61,7 @@ class _CustomSearchItemState extends State<CustomSearchItem> {
                 },
               ),
             ),
-          ],
-        ),
+        ],
       ),
     );
   }
