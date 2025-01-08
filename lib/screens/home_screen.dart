@@ -20,6 +20,7 @@ class HomeContentScreen extends StatelessWidget {
     return const Scaffold(
       appBar: CustomAppbar(
         title: 'ServiMix',
+        iconButton: Icons.notifications_none_outlined,
       ),
       drawer: SideMenu(),
       body: SingleChildScrollView(

@@ -5,158 +5,96 @@ class CustomIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    const FontWeight fontWeight = FontWeight.bold;
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
+        Padding(
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8.0),
           child: Text(
             'Categorías',
             style: TextStyle(
               fontSize: 20,
-              fontWeight: FontWeight.bold,
+              fontWeight: fontWeight,
             ),
           ),
         ),
         SizedBox(
           width: double.infinity,
           child: Wrap(
-            spacing: 8.0,
-            runSpacing: 8.0,
-            alignment: WrapAlignment.center,
+            spacing: 20,
+            runSpacing: 10,
+            alignment: WrapAlignment.spaceAround,
             children: [
-              TextButton(
-                onPressed: () {},
-                child: const Column(
-                  children: [
-                    Icon(
-                      Icons.air,
-                      color: Colors.grey,
-                    ),
-                    SizedBox(height: 4),
-                    Text(
-                      'Aires',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                  ],
-                ),
+              IconCustom(
+                icon: Icons.air_outlined,
+                text: 'Aires',
+                color: Colors.grey,
               ),
-              TextButton(
-                onPressed: () {},
-                child: const Column(
-                  children: [
-                    Icon(
-                      Icons.electric_bolt_outlined,
-                      color: Colors.grey,
-                    ),
-                    SizedBox(height: 4),
-                    Text(
-                      'Electricidad',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                  ],
-                ),
+              IconCustom(
+                icon: Icons.air_outlined,
+                text: 'Aires',
+                color: Colors.grey,
               ),
-              TextButton(
-                onPressed: () {},
-                child: const Column(
-                  children: [
-                    Icon(
-                      Icons.cleaning_services_outlined,
-                      color: Colors.grey,
-                    ),
-                    SizedBox(height: 4),
-                    Text(
-                      'Limpieza',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                  ],
-                ),
+              IconCustom(
+                icon: Icons.air_outlined,
+                text: 'Aires',
+                color: Colors.grey,
               ),
-              TextButton(
-                onPressed: () {},
-                child: const Column(
-                  children: [
-                    Icon(
-                      Icons.car_repair,
-                      color: Colors.grey,
-                    ),
-                    SizedBox(height: 4),
-                    Text(
-                      'Autos',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                  ],
-                ),
+              IconCustom(
+                icon: Icons.air_outlined,
+                text: 'Aires',
+                color: Colors.grey,
               ),
-              TextButton(
-                onPressed: () {},
-                child: const Column(
-                  children: [
-                    Icon(
-                      Icons.air,
-                      color: Colors.grey,
-                    ),
-                    SizedBox(height: 4),
-                    Text(
-                      'Aires',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                  ],
-                ),
+              IconCustom(
+                icon: Icons.air_outlined,
+                text: 'Aires',
+                color: Colors.grey,
               ),
-              TextButton(
-                onPressed: () {},
-                child: const Column(
-                  children: [
-                    Icon(
-                      Icons.electric_bolt_outlined,
-                      color: Colors.grey,
-                    ),
-                    SizedBox(height: 4),
-                    Text(
-                      'Electricidad',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                  ],
-                ),
+              IconCustom(
+                icon: Icons.air_outlined,
+                text: 'Aires',
+                color: Colors.grey,
               ),
-              TextButton(
-                onPressed: () {},
-                child: const Column(
-                  children: [
-                    Icon(
-                      Icons.cleaning_services_outlined,
-                      color: Colors.grey,
-                    ),
-                    SizedBox(height: 4),
-                    Text(
-                      'Limpieza',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                  ],
-                ),
+              IconCustom(
+                icon: Icons.air_outlined,
+                text: 'Aires',
+                color: Colors.grey,
               ),
-              TextButton(
-                onPressed: () {},
-                child: const Column(
-                  children: [
-                    Icon(
-                      Icons.car_repair,
-                      color: Colors.grey,
-                    ),
-                    SizedBox(height: 4),
-                    Text(
-                      'Autos',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                  ],
-                ),
+              IconCustom(
+                icon: Icons.air_outlined,
+                text: 'Aires',
+                color: Colors.grey,
               ),
             ],
           ),
         ),
       ],
+    );
+  }
+}
+
+class IconCustom extends StatelessWidget {
+  final IconData icon;
+  final String text;
+  final Color color;
+  const IconCustom({
+    super.key,
+    required this.icon,
+    required this.text,
+    required this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: () {},
+      child: Column(
+        children: [
+          Icon(icon, color: color),
+          Text(text, style: TextStyle(color: color)),
+        ],
+      ),
     );
   }
 }

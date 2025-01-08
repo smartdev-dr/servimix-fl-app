@@ -8,15 +8,16 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: const CustomAppbar(title: 'Buscar'),
-        drawer: const SideMenu(),
+    return const Scaffold(
+        appBar: CustomAppbar(
+            title: 'Buscar', iconButton: Icons.notifications_none_outlined),
+        drawer: SideMenu(),
         body: SingleChildScrollView(
             child: Column(
           children: [
-            const CustomDropdowns(),
+            CustomDropdowns(),
             CustomSearchItem(),
-            const SearchImageSwiper(),
+            SearchImageSwiper(),
           ],
         )));
   }

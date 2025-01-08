@@ -14,12 +14,11 @@ class SearchImageSwiper extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(left: 20, right: 10),
             child: GridView.count(
-              crossAxisCount: 2, // Número de columnas
-              crossAxisSpacing: 10, // Espacio horizontal entre tarjetas
-              mainAxisSpacing: 10, // Espacio vertical entre tarjetas
-              shrinkWrap: true, // Para ajustar el tamaño al contenido
-              physics:
-                  NeverScrollableScrollPhysics(), // Deshabilitamos el scroll
+              crossAxisCount: 2,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
               children: const [
                 CardSwiperSearch(
                   imageUrl:

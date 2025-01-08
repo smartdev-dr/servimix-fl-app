@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ServiceScreen extends StatelessWidget {
+  static const name = 'servicescreen';
   const ServiceScreen({super.key});
 
   @override

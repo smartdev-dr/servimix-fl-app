@@ -1,5 +1,7 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:servi_mix/screens/screens.dart';
 
 class SwiperCard extends StatelessWidget {
   const SwiperCard({super.key});
@@ -54,9 +56,14 @@ class _Slide extends StatelessWidget {
           child: Stack(
             fit: StackFit.expand,
             children: [
-              Image.network(
-                'https://img.freepik.com/fotos-premium/servicio-tecnico-cepillo-limpiar-aire-acondicionado_35076-3608.jpg',
-                fit: BoxFit.cover,
+              GestureDetector(
+                onTap: () {
+                  context.push('/servicescreen');
+                },
+                child: Image.network(
+                  'https://img.freepik.com/fotos-premium/servicio-tecnico-cepillo-limpiar-aire-acondicionado_35076-3608.jpg',
+                  fit: BoxFit.cover,
+                ),
               ),
 
               // Gradiente oscuro para mejor visibilidad

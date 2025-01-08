@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class CustomSearchItem extends StatefulWidget {
+  const CustomSearchItem({super.key});
+
   @override
-  _CustomSearchItemState createState() => _CustomSearchItemState();
+  CustomSearchItemState createState() => CustomSearchItemState();
 }
 
-class _CustomSearchItemState extends State<CustomSearchItem> {
-  TextEditingController _searchController = TextEditingController();
+class CustomSearchItemState extends State<CustomSearchItem> {
+  TextEditingController searchController = TextEditingController();
   List<String> _allItems = []; // Aquí puedes mapear tus elementos
   List<String> _filteredItems = [];
 
@@ -38,7 +40,7 @@ class _CustomSearchItemState extends State<CustomSearchItem> {
         mainAxisSize: MainAxisSize.min,
         children: [
           TextField(
-            controller: _searchController,
+            controller: searchController,
             onChanged: (query) => _filterItems(query),
             decoration: InputDecoration(
               hintText: 'Buscar servicios',

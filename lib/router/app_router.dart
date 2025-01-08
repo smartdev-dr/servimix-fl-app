@@ -6,4 +6,7 @@ final appRouter = GoRouter(initialLocation: '/', routes: [
   GoRoute(path: '/', builder: (context, state) => const HomeScreen()),
   GoRoute(path: '/search', builder: (context, state) => const SearchScreen()),
   GoRoute(path: '/chat', builder: (context, state) => const ChatScreen()),
+  GoRoute(
+      path: '/servicescreen',
+      builder: (context, state) => const ServiceScreen()),
 ]);

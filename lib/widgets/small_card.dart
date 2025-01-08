@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SmallCardGrid extends StatelessWidget {
   const SmallCardGrid({super.key});
@@ -24,72 +25,82 @@ class SmallCardGrid extends StatelessWidget {
           const SizedBox(height: 10),
           SizedBox(
             height: 170,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.only(left: 20, right: 10),
-              children: const [
-                SmallImageCard(
-                  imageUrl:
-                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
-                  title: 'Plomería',
-                  description: 'Servicios de plomería',
-                ),
-                SmallImageCard(
-                  imageUrl:
-                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
-                  title: 'Electricidad',
-                  description: 'Instalaciones',
-                ),
-                SmallImageCard(
-                  imageUrl:
-                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
-                  title: 'Limpieza',
-                  description: 'limpieza profesional',
-                ),
-                SmallImageCard(
-                  imageUrl:
-                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
-                  title: 'Pintura',
-                  description: 'Pintamos tu espacio',
-                ),
-              ],
+            child: GestureDetector(
+              onTap: () {
+                context.push('/servicescreen');
+              },
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.only(left: 20, right: 10),
+                children: const [
+                  SmallImageCard(
+                    imageUrl:
+                        'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
+                    title: 'Plomería',
+                    description: 'Servicios de plomería',
+                  ),
+                  SmallImageCard(
+                    imageUrl:
+                        'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
+                    title: 'Electricidad',
+                    description: 'Instalaciones',
+                  ),
+                  SmallImageCard(
+                    imageUrl:
+                        'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
+                    title: 'Limpieza',
+                    description: 'limpieza profesional',
+                  ),
+                  SmallImageCard(
+                    imageUrl:
+                        'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
+                    title: 'Pintura',
+                    description: 'Pintamos tu espacio',
+                  ),
+                ],
+              ),
             ),
           ),
           const SizedBox(height: 20),
           SizedBox(
             height: 170,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.only(
-                left: 20,
-                right: 10,
+            child: GestureDetector(
+              onTap: () {
+                context.push('/servicescreen');
+              },
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.only(
+                  left: 20,
+                  right: 10,
+                ),
+                children: const [
+                  SmallImageCard(
+                    imageUrl:
+                        'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
+                    title: 'Jardinería',
+                    description: 'Mantenimiento de jardines',
+                  ),
+                  SmallImageCard(
+                    imageUrl:
+                        'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
+                    title: 'Carpintería',
+                    description: 'Trabajos en madera',
+                  ),
+                  SmallImageCard(
+                    imageUrl:
+                        'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
+                    title: 'Cerrajería',
+                    description: 'Servicios 24/7',
+                  ),
+                  SmallImageCard(
+                    imageUrl:
+                        'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
+                    title: 'Albañilería',
+                    description: 'Construcción y reformas',
+                  ),
+                ],
               ),
-              children: const [
-                SmallImageCard(
-                  imageUrl:
-                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
-                  title: 'Jardinería',
-                  description: 'Mantenimiento de jardines',
-                ),
-                SmallImageCard(
-                  imageUrl:
-                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
-                  title: 'Carpintería',
-                  description: 'Trabajos en madera',
-                ),
-                SmallImageCard(
-                  imageUrl:
-                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
-                  title: 'Cerrajería',
-                  description: 'Servicios 24/7',
-                ),
-                SmallImageCard(
-                  imageUrl:
-                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
-                  title: 'Albañilería',
-                  description: 'Construcción y reformas',
-                ),
-              ],
             ),
           ),
         ],
