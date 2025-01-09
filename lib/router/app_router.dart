@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:servi_mix/screens/screens.dart';
 
-final appRouter = GoRouter(initialLocation: '/', routes: [
+final appRouter = GoRouter(initialLocation: '/loginscreen', routes: [
   GoRoute(path: '/profile', builder: (context, state) => const ProfileScreen()),
   GoRoute(path: '/', builder: (context, state) => const HomeScreen()),
   GoRoute(path: '/search', builder: (context, state) => const SearchScreen()),
@@ -12,4 +12,6 @@ final appRouter = GoRouter(initialLocation: '/', routes: [
   GoRoute(
       path: '/servicescreennext',
       builder: (context, state) => const ServiceScreenNext()),
+  GoRoute(
+      path: '/loginscreen', builder: (context, state) => const LoginScreen()),
 ]);
