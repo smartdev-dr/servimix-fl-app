@@ -48,7 +48,7 @@ class ReviewText extends StatelessWidget {
                       Text('Fernando Rodriguez '),
                       Icon(
                         Icons.star,
-                        color: Colors.orange,
+                        color: Color(0xFFFF6307),
                       ),
                     ],
                   )
@@ -108,7 +108,7 @@ class ReviewText extends StatelessWidget {
                 context.push('/servicescreennext');
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.orange,
+                backgroundColor: const Color(0xFFFF6307),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -179,7 +179,7 @@ class _ReviewCard extends StatelessWidget {
                     (index) => const Icon(
                       Icons.star,
                       size: 12,
-                      color: Colors.orange,
+                      color: Color(0xFFFF6307),
                     ),
                   ),
                 ),

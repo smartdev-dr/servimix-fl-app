@@ -36,7 +36,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
         currentIndex: selectedIndex,
         onTap: _onItemTapped,
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: const Color.fromARGB(255, 255, 140, 8),
+        selectedItemColor: const Color(0xFFFF6307),
         items: const [
           BottomNavigationBarItem(
             icon: Icon(

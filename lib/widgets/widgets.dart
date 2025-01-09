@@ -1,3 +1,4 @@
+export 'package:servi_mix/widgets/custom_formfaild.dart';
 export 'package:servi_mix/widgets/review_text_service.dart';
 export 'package:servi_mix/screens/service_screen.dart';
 export 'package:servi_mix/widgets/custom_search_item.dart';
