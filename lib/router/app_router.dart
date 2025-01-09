@@ -9,4 +9,7 @@ final appRouter = GoRouter(initialLocation: '/', routes: [
   GoRoute(
       path: '/servicescreen',
       builder: (context, state) => const ServiceScreen()),
+  GoRoute(
+      path: '/servicescreennext',
+      builder: (context, state) => const ServiceScreenNext()),
 ]);

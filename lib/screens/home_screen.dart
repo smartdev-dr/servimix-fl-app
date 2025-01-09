@@ -17,15 +17,20 @@ class HomeContentScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: CustomAppbar(
-        title: 'ServiMix',
-        iconButton: Icons.notifications_none_outlined,
-      ),
-      drawer: SideMenu(),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [SwiperCard(), CustomIconButton(), SmallCardGrid()],
+    return const SafeArea(
+      child: Scaffold(
+        appBar: CustomAppbar(
+          title: 'ServiMix',
+          iconButton: Icons.notifications_none_outlined,
+        ),
+        drawer: DrawerMenu(),
+        body: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [SwiperCard(), CustomIconButton(), SmallCardGrid()],
+            ),
+          ),
         ),
       ),
     );

@@ -13,7 +13,7 @@ class SmallCardGrid extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8.0),
+            padding: EdgeInsets.symmetric(vertical: 10),
             child: Text(
               'Mejores Calificados',
               style: TextStyle(
@@ -31,7 +31,6 @@ class SmallCardGrid extends StatelessWidget {
               },
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.only(left: 20, right: 10),
                 children: const [
                   SmallImageCard(
                     imageUrl:
@@ -70,10 +69,6 @@ class SmallCardGrid extends StatelessWidget {
               },
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.only(
-                  left: 20,
-                  right: 10,
-                ),
                 children: const [
                   SmallImageCard(
                     imageUrl:
@@ -123,9 +118,8 @@ class SmallImageCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(right: 10),
-      width: 160,
+    return SizedBox(
+      width: 171,
       child: Card(
         clipBehavior: Clip.antiAlias,
         elevation: 2,

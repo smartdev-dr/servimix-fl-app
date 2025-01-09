@@ -11,7 +11,7 @@ class SearchScreen extends StatelessWidget {
     return const Scaffold(
         appBar: CustomAppbar(
             title: 'Buscar', iconButton: Icons.notifications_none_outlined),
-        drawer: SideMenu(),
+        drawer: DrawerMenu(),
         body: SingleChildScrollView(
             child: Column(
           children: [

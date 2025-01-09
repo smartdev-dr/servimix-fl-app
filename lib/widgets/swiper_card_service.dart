@@ -1,10 +1,9 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:servi_mix/screens/screens.dart';
 
-class SwiperCard extends StatelessWidget {
-  const SwiperCard({super.key});
+class SwiperCardService extends StatelessWidget {
+  const SwiperCardService({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +11,8 @@ class SwiperCard extends StatelessWidget {
       height: 220,
       width: double.infinity,
       child: Swiper(
-        viewportFraction: 0.9,
-        scale: 0.8,
+        viewportFraction: 1.0,
+        scale: 0.9,
         pagination: const SwiperPagination(
           alignment: Alignment.bottomCenter,
           margin: EdgeInsets.only(bottom: 25),
@@ -58,7 +57,7 @@ class _Slide extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  context.push('/servicescreen');
+                  context.push('/servicescreennext');
                 },
                 child: Image.network(
                   'https://img.freepik.com/fotos-premium/servicio-tecnico-cepillo-limpiar-aire-acondicionado_35076-3608.jpg',
