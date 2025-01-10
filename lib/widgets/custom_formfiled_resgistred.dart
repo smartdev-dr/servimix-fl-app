@@ -36,7 +36,7 @@ class CustomFormfiledRegistred extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: 60),
+        const SizedBox(height: 55),
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 20),
           child: Align(

@@ -13,7 +13,10 @@ class _RegistredScreenState extends State<RegistredScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+      ),
       body: const SingleChildScrollView(
         child: CustomFormfiledRegistred(),
       ),

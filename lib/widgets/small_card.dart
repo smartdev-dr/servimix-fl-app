@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+// SmallCardGrid es un widget que muestra una cuadrícula de tarjetas pequeñas.
+
 class SmallCardGrid extends StatelessWidget {
   const SmallCardGrid({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 450,
+      height: 430,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
@@ -22,7 +24,7 @@ class SmallCardGrid extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 11),
           SizedBox(
             height: 170,
             child: GestureDetector(
@@ -60,7 +62,7 @@ class SmallCardGrid extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 9),
           SizedBox(
             height: 170,
             child: GestureDetector(
@@ -103,6 +105,8 @@ class SmallCardGrid extends StatelessWidget {
     );
   }
 }
+
+//configuracion de alturas tamaño de la imagen y texto
 
 class SmallImageCard extends StatelessWidget {
   final String imageUrl;

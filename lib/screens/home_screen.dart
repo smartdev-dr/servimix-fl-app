@@ -19,6 +19,7 @@ class HomeContentScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: CustomAppbar(
           title: 'ServiMix',
           iconButton: Icons.notifications_none_outlined,

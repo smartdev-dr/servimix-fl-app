@@ -15,7 +15,7 @@ class SwiperCard extends StatelessWidget {
         scale: 0.8,
         pagination: const SwiperPagination(
           alignment: Alignment.bottomCenter,
-          margin: EdgeInsets.only(bottom: 25),
+          margin: EdgeInsets.only(bottom: 35),
           builder: DotSwiperPaginationBuilder(
             activeColor: Colors.black,
             color: Colors.white,

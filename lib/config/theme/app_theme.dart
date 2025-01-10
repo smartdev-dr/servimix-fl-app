@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 const colorList = <Color>[
   Colors.green,
+  Colors.white,
   Color(0xFFFF6307),
-  Color.fromARGB(255, 0, 0, 0),
   Colors.purple,
   Colors.orange,
   Colors.pink,
@@ -27,5 +27,14 @@ class AppTheme {
   ThemeData getTheme() => ThemeData(
         useMaterial3: true,
         colorSchemeSeed: colorList[selectedColor],
+        scaffoldBackgroundColor: Colors.white,
+        drawerTheme: const DrawerThemeData(
+          backgroundColor: Colors.white,
+        ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          elevation: 0,
+          scrolledUnderElevation: 0,
+        ),
       );
 }

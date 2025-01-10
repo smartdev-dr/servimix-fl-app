@@ -28,11 +28,13 @@ class _NavigationScreenState extends State<NavigationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: IndexedStack(
         index: selectedIndex,
         children: _screens,
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
         currentIndex: selectedIndex,
         onTap: _onItemTapped,
         type: BottomNavigationBarType.fixed,

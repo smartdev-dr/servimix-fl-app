@@ -20,27 +20,23 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
         .titleLarge
         ?.copyWith(fontWeight: FontWeight.bold);
 
-    return CustomScrollView(
-      slivers: [
-        SliverAppBar(
-          pinned: true,
-          floating: false,
-          centerTitle: true,
-          title: Text(
-            title,
-            style: titleStyle,
-          ),
-          actions: [
-            IconButton(
-              icon: Icon(
-                iconButton,
-                color: Colors.black,
-              ),
-              onPressed: () {},
-            ),
-          ],
+    return SafeArea(
+      child: AppBar(
+        centerTitle: true,
+        title: Text(
+          title,
+          style: titleStyle,
         ),
-      ],
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              iconButton,
+              color: color,
+            ),
+          ),
+        ],
+      ),
     );
   }
 
