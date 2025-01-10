@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CustomFormfaild extends StatefulWidget {
   const CustomFormfaild({
@@ -77,9 +78,7 @@ class _CustomFormfaildState extends State<CustomFormfaild> {
               backgroundColor: const Color(0xFFFF6307),
               padding: const EdgeInsets.symmetric(vertical: 12),
             ),
-            onPressed: () {
-              // TODO: Validar los datos del formulario y enviarlos al backend
-            },
+            onPressed: () {},
             child: const Text(
               'Iniciar sesión',
               style: TextStyle(
@@ -94,7 +93,9 @@ class _CustomFormfaildState extends State<CustomFormfaild> {
           height: 150,
         ),
         TextButton(
-            onPressed: () {},
+            onPressed: () {
+              context.push('/registredscreen');
+            },
             child: const Text(
               'No tienes cuenta? Regístrate',
               style: TextStyle(color: Colors.black),

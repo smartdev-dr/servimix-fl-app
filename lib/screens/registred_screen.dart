@@ -1,12 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:servi_mix/widgets/widgets.dart';
 
-class RegistredScreen extends StatelessWidget {
+class RegistredScreen extends StatefulWidget {
+  static const name = 'registredscreen';
   const RegistredScreen({super.key});
 
   @override
+  State<RegistredScreen> createState() => _RegistredScreenState();
+}
+
+class _RegistredScreenState extends State<RegistredScreen> {
+  @override
   Widget build(BuildContext context) {
-    return AppBar(
-      title: const Text('registration'),
+    return Scaffold(
+      appBar: AppBar(),
+      body: const SingleChildScrollView(
+        child: CustomFormfiledRegistred(),
+      ),
     );
   }
 }

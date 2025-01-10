@@ -14,4 +14,7 @@ final appRouter = GoRouter(initialLocation: '/loginscreen', routes: [
       builder: (context, state) => const ServiceScreenNext()),
   GoRoute(
       path: '/loginscreen', builder: (context, state) => const LoginScreen()),
+  GoRoute(
+      path: '/registredscreen',
+      builder: (context, state) => const RegistredScreen()),
 ]);
