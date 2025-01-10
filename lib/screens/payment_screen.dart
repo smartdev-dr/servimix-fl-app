@@ -5,6 +5,15 @@ class PaymentScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SafeArea(
+        top: false,
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text('Payment'),
+          ),
+          body: Center(
+            child: Text('Payment Screen'),
+          ),
+        ));
   }
 }

@@ -78,7 +78,9 @@ class _CustomFormfaildState extends State<CustomFormfaild> {
               backgroundColor: const Color(0xFFFF6307),
               padding: const EdgeInsets.symmetric(vertical: 12),
             ),
-            onPressed: () {},
+            onPressed: () {
+              context.push('/');
+            },
             child: const Text(
               'Iniciar sesión',
               style: TextStyle(

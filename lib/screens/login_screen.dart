@@ -17,7 +17,6 @@ class _LoginScreenState extends State {
     return SafeArea(
       top: false,
       child: Scaffold(
-        backgroundColor: Colors.white,
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: SingleChildScrollView(
