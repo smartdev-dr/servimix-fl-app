@@ -1,3 +1,4 @@
+export 'package:servi_mix/widgets/custom_perfil_cards.dart';
 export 'package:servi_mix/widgets/custom_formfiled_resgistred.dart';
 export 'package:servi_mix/widgets/custom_formfaild_login.dart';
 export 'package:servi_mix/widgets/review_text_service.dart';
