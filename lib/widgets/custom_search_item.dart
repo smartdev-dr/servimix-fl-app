@@ -9,7 +9,7 @@ class CustomSearchItem extends StatefulWidget {
 
 class CustomSearchItemState extends State<CustomSearchItem> {
   TextEditingController searchController = TextEditingController();
-  List<String> _allItems = []; // Aquí puedes mapear tus elementos
+  final List<String> _allItems = []; // Aquí puedes mapear tus elementos
   List<String> _filteredItems = [];
 
   @override
@@ -35,7 +35,7 @@ class CustomSearchItemState extends State<CustomSearchItem> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 0),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [

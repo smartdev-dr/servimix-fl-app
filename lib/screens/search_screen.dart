@@ -8,18 +8,24 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        backgroundColor: Colors.white,
-        appBar: CustomAppbar(
-            title: 'Buscar', iconButton: Icons.notifications_none_outlined),
-        drawer: DrawerMenu(),
-        body: SingleChildScrollView(
-            child: Column(
-          children: [
-            CustomDropdowns(),
-            CustomSearchItem(),
-            SearchImageSwiper(),
-          ],
-        )));
+    return const SafeArea(
+      top: false,
+      child: Scaffold(
+          backgroundColor: Colors.white,
+          appBar: CustomAppbar(
+              title: 'Buscar', iconButton: Icons.notifications_none_outlined),
+          drawer: DrawerMenu(),
+          body: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: SingleChildScrollView(
+                child: Column(
+              children: [
+                CustomDropdowns(),
+                CustomSearchItem(),
+                SearchImageSwiper(),
+              ],
+            )),
+          )),
+    );
   }
 }

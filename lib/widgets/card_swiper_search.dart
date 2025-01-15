@@ -11,41 +11,38 @@ class SearchImageSwiper extends StatelessWidget {
       children: [
         const SizedBox(height: 10),
         Flexible(
-          child: Padding(
-            padding: const EdgeInsets.only(left: 20, right: 10),
-            child: GridView.count(
-              crossAxisCount: 2,
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 10,
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              children: const [
-                CardSwiperSearch(
-                  imageUrl:
-                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
-                  title: 'Plomería',
-                  description: 'Servicios de plomería',
-                ),
-                CardSwiperSearch(
-                  imageUrl:
-                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
-                  title: 'Electricidad',
-                  description: 'Instalaciones',
-                ),
-                CardSwiperSearch(
-                  imageUrl:
-                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
-                  title: 'Limpieza',
-                  description: 'Limpieza profesional',
-                ),
-                CardSwiperSearch(
-                  imageUrl:
-                      'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
-                  title: 'Pintura',
-                  description: 'Pintamos tu espacio',
-                ),
-              ],
-            ),
+          child: GridView.count(
+            crossAxisCount: 2,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10,
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            children: const [
+              CardSwiperSearch(
+                imageUrl:
+                    'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
+                title: 'Plomería',
+                description: 'Servicios de plomería',
+              ),
+              CardSwiperSearch(
+                imageUrl:
+                    'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
+                title: 'Electricidad',
+                description: 'Instalaciones',
+              ),
+              CardSwiperSearch(
+                imageUrl:
+                    'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
+                title: 'Limpieza',
+                description: 'Limpieza profesional',
+              ),
+              CardSwiperSearch(
+                imageUrl:
+                    'https://mejorconsalud.as.com/wp-content/uploads/2023/05/mujer-tareas-domesticas.jpg',
+                title: 'Pintura',
+                description: 'Pintamos tu espacio',
+              ),
+            ],
           ),
         ),
       ],
@@ -67,8 +64,7 @@ class CardSwiperSearch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(right: 10),
+    return SizedBox(
       width: 160,
       child: Card(
         clipBehavior: Clip.antiAlias,

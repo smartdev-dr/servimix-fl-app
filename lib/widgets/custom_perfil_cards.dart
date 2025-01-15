@@ -33,7 +33,7 @@ class CustomPerfilCards extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          'Nombre de Usuario',
+                          'Luis Rofriguez',
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -186,7 +186,7 @@ class CustomPerfilCards extends StatelessWidget {
                     ),
                     OptionItem(
                       icon: Icons.abc_outlined,
-                      title: 'Espanol',
+                      title: 'Español',
                       subtitle: 'Establecer tu idioma',
                     ),
                   ],

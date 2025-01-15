@@ -9,9 +9,9 @@ class PaymentScreen extends StatelessWidget {
         top: false,
         child: Scaffold(
           appBar: AppBar(
-            title: Text('Payment'),
+            title: const Text('Payment'),
           ),
-          body: Center(
+          body: const Center(
             child: Text('Payment Screen'),
           ),
         ));

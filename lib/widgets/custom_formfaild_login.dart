@@ -21,41 +21,43 @@ class _CustomFormfaildState extends State<CustomFormfaild> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(height: 30),
+        const SizedBox(height: 40),
         const Align(
           alignment: Alignment.centerLeft,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Bienvenido a',
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 0, 0, 0),
-                ),
-              ),
-              Text(
-                'Servimix',
-                style: TextStyle(
+          child: Flexible(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Bienvenido a',
+                  style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
-                    color: Color(0xFFFF6307)),
-              ),
-            ],
+                    color: Color.fromARGB(255, 0, 0, 0),
+                  ),
+                ),
+                Text(
+                  'Servimix',
+                  style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFFFF6307)),
+                ),
+              ],
+            ),
           ),
         ),
-        const SizedBox(height: 110),
+        const SizedBox(height: 50),
         Image.asset(
           'assets/servimix.png',
-          height: 290,
+          height: 270,
         ),
-        const SizedBox(height: 10.0),
+        const SizedBox(height: 20),
         TextField(
           controller: widget._controlleremail,
           decoration: InputDecoration(
             labelText: 'Correo electrónico',
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
           ),
         ),
         const SizedBox(height: 10),
@@ -64,16 +66,16 @@ class _CustomFormfaildState extends State<CustomFormfaild> {
           obscureText: true,
           decoration: InputDecoration(
             labelText: 'Contraseña',
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
           ),
         ),
-        const SizedBox(height: 25),
+        const SizedBox(height: 10),
         SizedBox(
           width: double.infinity,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(20),
               ),
               backgroundColor: const Color(0xFFFF6307),
               padding: const EdgeInsets.symmetric(vertical: 12),
@@ -92,7 +94,7 @@ class _CustomFormfaildState extends State<CustomFormfaild> {
           ),
         ),
         const SizedBox(
-          height: 150,
+          height: 85,
         ),
         TextButton(
             onPressed: () {
