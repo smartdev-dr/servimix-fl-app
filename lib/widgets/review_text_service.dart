@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 //review de la screen de servicios
 
@@ -99,33 +98,6 @@ class ReviewText extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(height: 90),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10),
-          child: SizedBox(
-            width: 393,
-            height: 63,
-            child: ElevatedButton(
-              onPressed: () {
-                context.push('/servicescreennext');
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFFF6307),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
-              child: const Text(
-                'Contratar Servicio',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ),
-        ),
       ],
     );
   }
@@ -144,50 +116,54 @@ class _ReviewCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 136,
-      height: 59,
-      margin: const EdgeInsets.only(right: 8),
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey),
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Row(
+    return Card(
+      child: SizedBox(
+        child: Container(
+          width: 136,
+          height: 59,
+          margin: const EdgeInsets.only(right: 8),
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  percentage,
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.grey.shade600,
+                  title,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                const SizedBox(width: 4),
                 Row(
-                  children: List.generate(
-                    rating,
-                    (index) => const Icon(
-                      Icons.star,
-                      size: 12,
-                      color: Color(0xFFFF6307),
+                  children: [
+                    Text(
+                      percentage,
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.grey.shade600,
+                      ),
                     ),
-                  ),
+                    const SizedBox(width: 4),
+                    Row(
+                      children: List.generate(
+                        rating,
+                        (index) => const Icon(
+                          Icons.star,
+                          size: 12,
+                          color: Color(0xFFFF6307),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
-          ],
+          ),
         ),
       ),
     );

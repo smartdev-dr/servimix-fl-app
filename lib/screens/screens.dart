@@ -1,4 +1,3 @@
-export 'package:servi_mix/widgets/swiper_card_service.dart';
 export 'package:servi_mix/screens/perfil_screen.dart';
 export 'package:servi_mix/screens/chat_screen.dart';
 export 'package:servi_mix/screens/home_screen.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:go_router/go_router.dart';
 import 'package:servi_mix/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,19 +17,27 @@ class HomeContentScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
-        appBar: CustomAppbar(
+        appBar: const CustomAppbar(
           title: 'ServiMix',
           iconButton: Icons.notifications_none_outlined,
         ),
-        drawer: DrawerMenu(),
+        drawer: const DrawerMenu(),
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: SingleChildScrollView(
             child: Column(
-              children: [SwiperCard(), CustomIconButton(), SmallCardGrid()],
+              children: [
+                SwiperCard(
+                  onPressed: () {
+                    context.push('/servicescreen');
+                  },
+                ),
+                const CustomIconButton(),
+                const SmallCardGrid()
+              ],
             ),
           ),
         ),

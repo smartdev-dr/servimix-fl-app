@@ -1,3 +1,6 @@
+export 'package:servi_mix/widgets/purchase_information_card.dart';
+export 'package:servi_mix/widgets/viriations_text.dart';
+export 'package:servi_mix/widgets/custom_button.dart';
 export 'package:servi_mix/widgets/custom_perfil_cards.dart';
 export 'package:servi_mix/widgets/custom_formfiled_resgistred.dart';
 export 'package:servi_mix/widgets/custom_formfaild_login.dart';
@@ -10,5 +13,5 @@ export 'package:servi_mix/widgets/custom_dropdowns.dart';
 export 'package:servi_mix/widgets/small_card.dart';
 export 'package:servi_mix/widgets/custom_icon_button.dart';
 export 'package:servi_mix/widgets/drawer_menu.dart';
-export 'package:servi_mix/widgets/swiper_card_home.dart';
+export 'package:servi_mix/widgets/swiper_card.dart';
 export 'package:servi_mix/widgets/custom_appbar.dart';
