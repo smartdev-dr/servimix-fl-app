@@ -10,6 +10,19 @@ class CustomFormfaild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final loginForm = Provider.of<LoginFormProvider>(context);
+    final AuthLoginService authLoginService = AuthLoginService();
+    void handleLogin() async {
+      print(loginForm.email);
+      print(loginForm.password);
+
+      if (loginForm.isValidForm() == true) {
+        final resp = await authLoginService.loginUser(
+            loginForm.email, loginForm.password);
+        print(resp);
+      } else {
+        print('salio mal');
+      }
+    }
 
     return Form(
       key: loginForm.formkey,
@@ -74,7 +87,7 @@ class CustomFormfaild extends StatelessWidget {
             ),
             onChanged: (value) => loginForm.password = value,
             validator: (value) {
-              return (value != null && value.length >= 6)
+              return (value != null && value.length >= 3)
                   ? null
                   : 'La contraseña debe tener 6 caracteres';
             },
@@ -90,9 +103,7 @@ class CustomFormfaild extends StatelessWidget {
                 backgroundColor: const Color(0xFFFF6307),
                 padding: const EdgeInsets.symmetric(vertical: 12),
               ),
-              onPressed: () {
-                if (loginForm.isValidForm() == true) {}
-              },
+              onPressed: handleLogin,
               child: const Text(
                 'Iniciar sesión',
                 style: TextStyle(
