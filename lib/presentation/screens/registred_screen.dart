@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:servi_mix/widgets/custom_button.dart';
+import 'package:provider/provider.dart';
+import 'package:servi_mix/presentation/providers/providers.dart';
+
 import 'package:servi_mix/widgets/widgets.dart';
 
-class RegistredScreen extends StatefulWidget {
+class RegistredScreen extends StatelessWidget {
   static const name = 'registredscreen';
   const RegistredScreen({super.key});
 
-  @override
-  State<RegistredScreen> createState() => _RegistredScreenState();
-}
-
-class _RegistredScreenState extends State<RegistredScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -25,7 +22,9 @@ class _RegistredScreenState extends State<RegistredScreen> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const CustomFormfiledRegistred(),
+                ChangeNotifierProvider(
+                    create: (_) => RegisterFormProvider(),
+                    child: const CustomFormfiledRegistred()),
                 const SizedBox(height: 40),
                 CustomButton(text: 'Registrar', onPressed: () {}),
                 const SizedBox(

@@ -1,0 +1,9 @@
+export 'package:servi_mix/presentation/screens/perfil_screen.dart';
+export 'package:servi_mix/presentation/screens/chat_screen.dart';
+export 'package:servi_mix/presentation/screens/home_screen.dart';
+export 'package:servi_mix/presentation/screens/login_screen.dart';
+export 'package:servi_mix/presentation/screens/payment_screen.dart';
+export 'package:servi_mix/presentation/screens/registred_screen.dart';
+export 'package:servi_mix/presentation/screens/search_screen.dart';
+export 'package:servi_mix/presentation/screens/service_screen.dart';
+export 'package:servi_mix/presentation/screens/service_screen_next.dart';

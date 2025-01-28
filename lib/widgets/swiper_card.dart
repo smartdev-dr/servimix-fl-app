@@ -11,6 +11,7 @@ class SwiperCard extends StatelessWidget {
       height: 220,
       width: double.infinity,
       child: Swiper(
+        autoplay: true,
         viewportFraction: 1.0,
         scale: 0.8,
         pagination: const SwiperPagination(

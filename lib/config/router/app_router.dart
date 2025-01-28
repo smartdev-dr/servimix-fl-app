@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:servi_mix/screens/screens.dart';
+import 'package:servi_mix/presentation/screens/screens.dart';
 
 final appRouter = GoRouter(initialLocation: '/', routes: [
   GoRoute(path: '/profile', builder: (context, state) => const ProfileScreen()),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../screens/screens.dart';
+import '../presentation/screens/screens.dart';
 
 // Este es es BottonNavigationbar con las rutas a los screens
 class NavigationScreen extends StatefulWidget {

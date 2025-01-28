@@ -87,7 +87,7 @@ class CustomPerfilCards extends StatelessWidget {
                     OptionItem(
                       icon: Icons.phone_callback_rounded,
                       title: '809-686-9468',
-                      subtitle: 'Establecer número de teléfono',
+                      subtitle: 'Establecer número telefonico',
                     ),
                     OptionItem(
                       icon: Icons.location_on,
@@ -142,7 +142,7 @@ class CustomPerfilCards extends StatelessWidget {
                     OptionItem(
                       icon: Icons.location_on,
                       title: 'Metodos de pago',
-                      subtitle: 'Establece tus metodos de pago',
+                      subtitle: 'Establece metodos de pago',
                     ),
                   ],
                 ),
@@ -177,7 +177,7 @@ class CustomPerfilCards extends StatelessWidget {
                     OptionItem(
                       icon: Icons.fingerprint_outlined,
                       title: 'Inicio de sesión',
-                      subtitle: 'Inicia sesión con datos biométricos',
+                      subtitle: 'Inicia sesión con biométricos',
                     ),
                     OptionItem(
                       icon: Icons.phone_callback_rounded,
@@ -262,24 +262,30 @@ class OptionItem extends StatelessWidget {
             size: 30,
           ),
           const SizedBox(width: 16),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
+          ClipRRect(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  overflow: TextOverflow.visible,
+                  maxLines: 2,
+                  title,
+                  style: const TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              Text(
-                subtitle,
-                style: const TextStyle(
-                  fontSize: 12,
-                  color: Color(0xFFFF6307),
+                Text(
+                  overflow: TextOverflow.visible,
+                  maxLines: 2,
+                  subtitle,
+                  style: const TextStyle(
+                    fontSize: 12,
+                    color: Color(0xFFFF6307),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
 
           // Empuja el botón al final de la fila

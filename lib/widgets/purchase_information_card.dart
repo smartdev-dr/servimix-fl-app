@@ -24,7 +24,7 @@ class PurchaseInformationCard extends StatelessWidget {
             width: 381,
             child: Card(
               color: Colors.white,
-              elevation: 2,
+              elevation: 4,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
@@ -42,6 +42,25 @@ class PurchaseInformationCard extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+          ),
+        ),
+        const SizedBox(height: 15),
+        SizedBox(
+          width: 381,
+          height: 88,
+          child: Card(
+            color: Colors.white,
+            elevation: 4,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [Text('hola mundo')]),
             ),
           ),
         ),
@@ -65,7 +84,7 @@ class PurchaseInformationCard extends StatelessWidget {
               onPressed: () {
                 // Acción al presionar "-"
               },
-              icon: const Icon(Icons.remove, color: Colors.black),
+              icon: const Icon(Icons.remove_circle, color: Colors.black),
               iconSize: 18,
               padding: EdgeInsets.zero,
               constraints: const BoxConstraints(),
@@ -74,7 +93,7 @@ class PurchaseInformationCard extends StatelessWidget {
               onPressed: () {
                 // Acción al presionar "+"
               },
-              icon: const Icon(Icons.add, color: Colors.black),
+              icon: const Icon(Icons.add_box, color: Colors.black),
               iconSize: 18,
               padding: EdgeInsets.zero,
               constraints: const BoxConstraints(),

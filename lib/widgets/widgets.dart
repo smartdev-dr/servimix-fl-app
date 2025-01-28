@@ -5,7 +5,7 @@ export 'package:servi_mix/widgets/custom_perfil_cards.dart';
 export 'package:servi_mix/widgets/custom_formfiled_resgistred.dart';
 export 'package:servi_mix/widgets/custom_formfaild_login.dart';
 export 'package:servi_mix/widgets/review_text_service.dart';
-export 'package:servi_mix/screens/service_screen.dart';
+export 'package:servi_mix/presentation/screens/service_screen.dart';
 export 'package:servi_mix/widgets/custom_search_item.dart';
 export 'package:servi_mix/widgets/card_swiper_search.dart';
 export 'package:servi_mix/widgets/custom_navigation_bar.dart';
