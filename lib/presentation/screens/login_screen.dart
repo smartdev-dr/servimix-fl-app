@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:servi_mix/presentation/providers/providers.dart';
 import 'package:servi_mix/widgets/widgets.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -14,9 +12,9 @@ class LoginScreen extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: SingleChildScrollView(
-            child: ChangeNotifierProvider(
-                create: (_) => LoginFormProvider(),
-                child: const CustomFormfaild()),
+            child: GestureDetector(
+                onTap: FocusScope.of(context).unfocus,
+                child: const CustomFormfaildLogin()),
           ),
         ),
       ),

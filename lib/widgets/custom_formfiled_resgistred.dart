@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
-import '../presentation/providers/register_form_provider.dart';
 
 class CustomFormfiledRegistred extends StatelessWidget {
   const CustomFormfiledRegistred({
@@ -10,10 +7,7 @@ class CustomFormfiledRegistred extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final loginForm = Provider.of<RegisterFormProvider>(context);
-
     return Form(
-      key: loginForm.formkey,
       child: Column(
         children: [
           const Align(
@@ -65,15 +59,6 @@ class CustomFormfiledRegistred extends StatelessWidget {
               border:
                   OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
             ),
-            onChanged: (value) => loginForm.email = value,
-            validator: (value) {
-              String pattern =
-                  r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
-              RegExp regExp = RegExp(pattern);
-              return regExp.hasMatch(value ?? '')
-                  ? null
-                  : 'El correo no es correcto';
-            },
           ),
           const SizedBox(
             height: 10,
@@ -96,12 +81,6 @@ class CustomFormfiledRegistred extends StatelessWidget {
               border:
                   OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
             ),
-            onChanged: (value) => loginForm.password = value,
-            validator: (value) {
-              return (value != null && value.length >= 6)
-                  ? null
-                  : 'La contraseña debe tener 6 caracteres';
-            },
           ),
           const SizedBox(
             height: 10,
@@ -124,12 +103,6 @@ class CustomFormfiledRegistred extends StatelessWidget {
               border:
                   OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
             ),
-            onChanged: (value) => loginForm.confirmpassword = value,
-            validator: (value) {
-              return (value != null && value.length >= 6)
-                  ? null
-                  : 'La contraseña debe tener 6 caracteres';
-            },
           ),
           const SizedBox(height: 60),
           const Align(
