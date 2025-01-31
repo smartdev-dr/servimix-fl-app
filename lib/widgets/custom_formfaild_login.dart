@@ -28,27 +28,25 @@ class CustomFormfaildLogin extends ConsumerWidget {
         const SizedBox(height: 40),
         const Align(
           alignment: Alignment.centerLeft,
-          child: Flexible(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Bienvenido a',
-                  style: TextStyle(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Bienvenido a',
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 0, 0, 0),
+                ),
+              ),
+              Text(
+                'Servimix',
+                style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 0, 0, 0),
-                  ),
-                ),
-                Text(
-                  'Servimix',
-                  style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFFFF6307)),
-                ),
-              ],
-            ),
+                    color: Color(0xFFFF6307)),
+              ),
+            ],
           ),
         ),
         const SizedBox(height: 50),
@@ -88,9 +86,9 @@ class CustomFormfaildLogin extends ConsumerWidget {
               backgroundColor: const Color(0xFFFF6307),
               padding: const EdgeInsets.symmetric(vertical: 12),
             ),
-            onPressed: () {
-              ref.read(loginFormProvider.notifier).onFormSubmit();
-            },
+            onPressed: loginForm.isPosting
+                ? null
+                : ref.read(loginFormProvider.notifier).onFormSubmit,
             child: const Text(
               'Iniciar sesión',
               style: TextStyle(

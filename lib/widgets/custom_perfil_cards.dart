@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:servi_mix/presentation/providers/auth_provider.dart';
 
-class CustomPerfilCards extends StatelessWidget {
+class CustomPerfilCards extends ConsumerWidget {
   const CustomPerfilCards({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Center(
       child: Column(
         children: [
@@ -62,7 +63,7 @@ class CustomPerfilCards extends StatelessWidget {
             height: 364,
             child: Card(
               color: Colors.white,
-              elevation: 2,
+              elevation: 4,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
@@ -209,7 +210,7 @@ class CustomPerfilCards extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 12),
               ),
               onPressed: () {
-                context.replace('/loginscreen');
+                ref.read(authProvider.notifier).logout();
               },
               child: const Text(
                 'Cerrar sesión',

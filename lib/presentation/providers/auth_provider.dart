@@ -56,8 +56,6 @@ class AuthNotifier extends StateNotifier<AuthState> {
         user: null,
         authStatus: AuthStatus.noauthenticated,
         errorMessage: errorMesagge);
-    //await authRepository.logout();
-    //state = state.copyWith(user: null, authStatus: AuthStatus.noauthenticated);
   }
 }
 

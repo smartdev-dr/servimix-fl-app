@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:servi_mix/widgets/custom_button.dart';
+
 import 'package:servi_mix/widgets/widgets.dart';
 
 class RegistredScreen extends StatefulWidget {
