@@ -41,7 +41,7 @@ final goRouterProvider = Provider((ref) {
           return '/';
         }
 
-        // Si  NO está autenticado y quiere ir a cualquier otra pantalla, lo enviamos al login
+        //NO autenticado y quiere ir a cualquier otra pantalla, lo enviamos al login
         if (authStatus == AuthStatus.noauthenticated &&
             isGoingTo != '/loginscreen' &&
             isGoingTo != '/registredscreen') {

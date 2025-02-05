@@ -31,8 +31,19 @@ class AuthDataSourceImpl extends AuthDataSource {
 
   @override
   Future<User> register(String email, String password, String name,
-      String lastName, String phone) {
-    // TODO: implement register
-    throw UnimplementedError();
+      String lastName, String phone) async {
+    try {
+      final response = await dio.post('/users', data: {
+        'email': email,
+        'password': password,
+        'name': name,
+        'lastname': lastName,
+        'phone': phone,
+      });
+      final user = UserMapper.userJsonEntity(response.data);
+      return user;
+    } catch (e) {
+      throw WrongCredentialsError();
+    }
   }
 }
