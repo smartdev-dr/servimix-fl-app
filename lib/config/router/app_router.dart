@@ -30,6 +30,9 @@ final goRouterProvider = Provider((ref) {
         GoRoute(
             path: '/registredscreen',
             builder: (context, state) => const RegistredScreen()),
+        GoRoute(
+            path: '/paymentscreen',
+            builder: (context, state) => const PaymentScreen()),
       ],
       redirect: (context, state) {
         final isGoingTo = state.uri.path;

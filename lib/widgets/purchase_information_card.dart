@@ -55,15 +55,67 @@ class PurchaseInformationCard extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
-            child: const Padding(
-              padding: EdgeInsets.all(16.0),
+            child: Padding(
+              padding: const EdgeInsets.only(
+                top: 8,
+                left: 20,
+                right: 20,
+              ),
               child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [Text('hola mundo')]),
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text('Direccion del servicio ',
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                          'Santo Domingo Residencial \nColinas del seminario #32',
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.grey,
+                          )),
+                      IconButton(
+                        onPressed: () {
+                          // Acción al presionar el botón de editar
+                        },
+                        icon: const Icon(Icons.note_alt_outlined,
+                            color: Colors.black),
+                        iconSize: 25,
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
           ),
         ),
+        const SizedBox(
+          height: 80,
+        ),
+        const Row(
+          children: [
+            Text('Subtotal: ',
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                )),
+            Spacer(),
+            Text(
+              '\$ 0.00',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(
+          height: 20,
+        )
       ],
     );
   }
@@ -84,7 +136,7 @@ class PurchaseInformationCard extends StatelessWidget {
               onPressed: () {
                 // Acción al presionar "-"
               },
-              icon: const Icon(Icons.remove_circle, color: Colors.black),
+              icon: const Icon(Icons.remove_circle, color: Colors.grey),
               iconSize: 18,
               padding: EdgeInsets.zero,
               constraints: const BoxConstraints(),

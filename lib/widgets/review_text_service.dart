@@ -30,33 +30,37 @@ class ReviewText extends StatelessWidget {
             ),
           ),
         ),
-        const Padding(
-          padding: EdgeInsets.symmetric(vertical: 8.0),
-          child: Row(
-            children: [
-              CircleAvatar(
-                radius: 30,
-                backgroundImage: AssetImage('assets/servimix.png'),
-              ),
-              SizedBox(width: 16),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Fernando Rodriguez '),
-                      Icon(
-                        Icons.star,
-                        color: Color(0xFFFF6307),
-                      ),
-                    ],
-                  )
-                ],
-              )
-            ],
-          ),
+        const SizedBox(
+          height: 20,
+        ),
+        const Row(
+          children: [
+            CircleAvatar(
+              radius: 30,
+              backgroundImage: AssetImage('assets/servimix.png'),
+            ),
+            SizedBox(width: 16),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                    'Fernando Rodriguez '),
+                Icon(
+                  size: 20,
+                  Icons.star,
+                  color: Color(0xFFFF6307),
+                ),
+                Text(
+                    style: TextStyle(
+                      color: Colors.grey,
+                    ),
+                    '10 reviews')
+              ],
+            )
+          ],
         ),
         const Padding(
           padding: EdgeInsets.symmetric(vertical: 8.0),
@@ -74,28 +78,7 @@ class ReviewText extends StatelessWidget {
           height: 59,
           child: ListView(
             scrollDirection: Axis.horizontal,
-            children: const [
-              _ReviewCard(
-                title: "Excelente",
-                percentage: "35%",
-                rating: 5,
-              ),
-              _ReviewCard(
-                title: "Muy Bueno",
-                percentage: "28%",
-                rating: 4,
-              ),
-              _ReviewCard(
-                title: "Bueno",
-                percentage: "20%",
-                rating: 3,
-              ),
-              _ReviewCard(
-                title: "Regular",
-                percentage: "17%",
-                rating: 2,
-              ),
-            ],
+            children: [_ReviewCard()],
           ),
         ),
       ],
@@ -104,66 +87,16 @@ class ReviewText extends StatelessWidget {
 }
 
 class _ReviewCard extends StatelessWidget {
-  final String title;
-  final String percentage;
-  final int rating;
-
-  const _ReviewCard({
-    required this.title,
-    required this.percentage,
-    required this.rating,
-  });
-
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: SizedBox(
-        child: Container(
-          width: 136,
-          height: 59,
-          margin: const EdgeInsets.only(right: 8),
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey),
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  title,
-                  style: const TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Row(
-                  children: [
-                    Text(
-                      percentage,
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.grey.shade600,
-                      ),
-                    ),
-                    const SizedBox(width: 4),
-                    Row(
-                      children: List.generate(
-                        rating,
-                        (index) => const Icon(
-                          Icons.star,
-                          size: 12,
-                          color: Color(0xFFFF6307),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
+    return SizedBox(
+      width: 136,
+      height: 59,
+      child: Card(
+        color: Colors.grey[300],
+        elevation: 4,
+        child: const Row(
+          children: [Icon(color: Color(0xFFFF6307), Icons.star)],
         ),
       ),
     );

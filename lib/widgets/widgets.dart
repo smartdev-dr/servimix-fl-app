@@ -1,3 +1,4 @@
+export 'package:servi_mix/widgets/payment_information_card.dart';
 export 'package:servi_mix/widgets/purchase_information_card.dart';
 export 'package:servi_mix/widgets/viriations_text.dart';
 export 'package:servi_mix/widgets/custom_button.dart';

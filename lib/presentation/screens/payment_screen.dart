@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:servi_mix/widgets/widgets.dart';
 
 class PaymentScreen extends StatelessWidget {
   const PaymentScreen({super.key});
@@ -8,11 +9,27 @@ class PaymentScreen extends StatelessWidget {
     return SafeArea(
         top: false,
         child: Scaffold(
-          appBar: AppBar(
-            title: const Text('Payment'),
-          ),
-          body: const Center(
-            child: Text('Payment Screen'),
+          appBar: const CustomAppbar(title: 'Pago '),
+          body: Padding(
+            padding: const EdgeInsets.only(bottom: 10, left: 20, right: 20),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  const VariationsText(),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  const PaymentInformationCard(),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  CustomButton(
+                    onPressed: () {},
+                    text: 'Solicitar servicio',
+                  )
+                ],
+              ),
+            ),
           ),
         ));
   }

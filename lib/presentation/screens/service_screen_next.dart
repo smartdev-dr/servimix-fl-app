@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:servi_mix/widgets/widgets.dart';
 
 class ServiceScreenNext extends StatelessWidget {
@@ -7,15 +8,24 @@ class ServiceScreenNext extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       top: false,
       child: Scaffold(
-        appBar: CustomAppbar(title: 'Variaciones'),
+        appBar: const CustomAppbar(title: 'Variaciones'),
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.only(bottom: 10, left: 20, right: 20),
           child: SingleChildScrollView(
             child: Column(
-              children: [VariationsText(), PurchaseInformationCard()],
+              children: [
+                const VariationsText(),
+                const PurchaseInformationCard(),
+                CustomButton(
+                  text: 'Proceder',
+                  onPressed: () {
+                    context.push('/paymentscreen');
+                  },
+                )
+              ],
             ),
           ),
         ),
